@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Employee {
+  PassportNumber   Int      @id
+  Name             String   @db.VarChar(200)
+  IssueDate        DateTime @db.Date
+  ExpiryDate       DateTime @db.Date
+  VisaIssueDate    DateTime @db.Date
+  VisaExpiryDate   DateTime @db.Date
+  DateOfEntry      DateTime @db.Date
+  OriginCountry    String   @db.VarChar(200)
+  WorkID           Int
+  WorkIDExpiryDate DateTime @db.Date
+}

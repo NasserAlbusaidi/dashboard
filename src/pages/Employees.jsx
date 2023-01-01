@@ -1,8 +1,17 @@
 import React from 'react';
 import { GridComponent, Inject, ColumnsDirective, ColumnDirective, Search, Page } from '@syncfusion/ej2-react-grids';
-
+import { PrismaClient } from '@prisma/client'
 import { employeesData, employeesGrid } from '../data/dummy';
 import { Header } from '../components';
+
+const prisma = new PrismaClient()
+
+async function getEmployees() {
+  const allEmployees = await prisma.employee.findMany()
+  console.log(allEmployees)
+  return allEmployees
+}
+
 
 const Employees = () => {
   const toolbarOptions = ['Search'];

@@ -63,11 +63,7 @@ export const kanbanGrid = [
 ];
 const gridEmployeeProfile = (props) => (
   <div className="flex items-center gap-2">
-    <img
-      className="rounded-full w-10 h-10"
-      src={props.EmployeeImage}
-      alt="employee"
-    />
+    
     <p>{props.Name}</p>
   </div>
 );
@@ -432,7 +428,7 @@ export const customersGrid = [
   },
 
 ];
-
+//ERP Grid
 export const employeesGrid = [
   { headerText: 'Employee',
     width: '150',
@@ -443,30 +439,52 @@ export const employeesGrid = [
     width: '0',
     textAlign: 'Center',
   },
-  { field: 'Title',
-    headerText: 'Designation',
+  { field: 'PassportNumber',
+    headerText: 'Passport Number',
     width: '170',
     textAlign: 'Center',
   },
-  { headerText: 'Country',
-    width: '120',
-    textAlign: 'Center',
-    template: gridEmployeeCountry },
-
-  { field: 'HireDate',
-    headerText: 'Hire Date',
+  { field: 'IssueDate',
+    headerText: 'Issue Date',
     width: '135',
     format: 'yMd',
     textAlign: 'Center' },
 
-  { field: 'ReportsTo',
-    headerText: 'Reports To',
+  { field: 'ExpiryDate',
+    headerText: 'Expiry Date',
     width: '120',
-    textAlign: 'Center' },
+    textAlign: 'Center' 
+  },
+  {
+    field: 'DateOfIssueVisa',
+    headerText: 'VISA Date of issue',
+    width: '160',
+    textAlign: 'Center' 
+  },
+  {
+    field: 'DateOfEntry',
+    headerText: 'Date of entry',
+    width: '120',
+    textAlign: 'Center' 
+  },
+  {
+    field: 'OriginCountry',
+    headerText: 'Origin Country',
+    width: '120',
+    textAlign: 'Center' 
+  },
   { field: 'EmployeeID',
     headerText: 'Employee ID',
     width: '125',
-    textAlign: 'Center' },
+    textAlign: 'Center' 
+  },
+  {
+    field: 'EmployeeIDExpiryDate',
+    headerText: 'Employee ID Expiry Date',
+    width: '160',
+    textAlign: 'Center' 
+  },
+
 ];
 
 export const links = [
